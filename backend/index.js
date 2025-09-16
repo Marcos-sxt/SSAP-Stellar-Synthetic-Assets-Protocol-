@@ -25,7 +25,7 @@ const pricesCache = new Map();
 const riskAlerts = new Map();
 
 // Configuração Stellar
-const server = new StellarSdk.Server('https://horizon-testnet.stellar.org');
+const stellarServer = new StellarSdk.Server('https://horizon-testnet.stellar.org');
 const networkPassphrase = 'Test SDF Network ; September 2015';
 
 // Configuração do contrato (será preenchido após deploy)
