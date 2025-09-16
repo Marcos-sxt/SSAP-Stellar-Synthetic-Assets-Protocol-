@@ -1,0 +1,21 @@
+{
+  "name": "ssap-backend",
+  "version": "1.0.0",
+  "description": "SSAP Backend Server",
+  "main": "backend/websocket-server.js",
+  "scripts": {
+    "start": "node backend/websocket-server.js",
+    "dev": "node backend/websocket-server.js",
+    "install-deps": "cd backend && npm install"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "ws": "^8.14.2",
+    "axios": "^1.6.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
