@@ -3,7 +3,7 @@ services:
     name: ssap-backend
     env: node
     plan: free
-    nodeVersion: 18.19.0
+    nodeVersion: 20.18.0
     buildCommand: npm install
     startCommand: npm start
     envVars:

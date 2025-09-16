@@ -2,10 +2,11 @@
   "name": "ssap-stellar",
   "version": "1.0.0",
   "description": "Stellar Synthetic Asset Protocol (SSAP) on Stellar blockchain",
-  "main": "index.js",
+  "main": "backend/websocket-server.js",
   "scripts": {
+    "start": "node backend/websocket-server.js",
+    "dev": "node backend/websocket-server.js",
     "install:all": "npm install && cd frontend && npm install && cd ../backend && npm install",
-    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
     "dev:frontend": "cd frontend && npm run dev",
     "dev:backend": "cd backend && npm run dev",
     "build": "cd frontend && npm run build",
@@ -14,8 +15,7 @@
     "test:backend": "cd backend && npm test",
     "test:frontend": "cd frontend && npm test",
     "deploy:contract": "cd contracts && stellar contract deploy --source-account admin --network testnet",
-    "setup:contract": "cd backend && node setup-dummy-data.js",
-    "start": "cd backend && node websocket-server.js"
+    "setup:contract": "cd backend && node setup-dummy-data.js"
   },
   "keywords": [
     "stellar",
@@ -25,10 +25,17 @@
     "trading",
     "blockchain"
   ],
-  "author": "SAPP Team",
+  "author": "SSAP Team",
   "license": "MIT",
-  "devDependencies": {
-    "concurrently": "^8.2.2"
+  "dependencies": {
+    "express": "^4.18.2",
+    "ws": "^8.14.2",
+    "axios": "^1.6.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1"
+  },
+  "engines": {
+    "node": ">=20.0.0"
   },
   "repository": {
     "type": "git",
