@@ -22,7 +22,7 @@ export interface UseWebSocketReturn {
   reconnect: () => void;
 }
 
-const WEBSOCKET_URL = 'ws://localhost:8080';
+const WEBSOCKET_URL = 'wss://ssap-stellar-synthetic-assets-protocol.onrender.com';
 
 export function useWebSocket(): UseWebSocketReturn {
   const [prices, setPrices] = useState<PriceData[]>([]);
