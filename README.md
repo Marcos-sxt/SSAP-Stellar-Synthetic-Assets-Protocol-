@@ -4,19 +4,20 @@ A decentralized synthetic asset trading platform built on Stellar blockchain, fe
 
 ## 🚀 Live Demo
 
-- **Frontend**: [Deployed on Vercel](https://ssap-frontend.vercel.app) (Coming Soon)
-- **Backend**: [Deployed on Render](https://ssap-backend.onrender.com) (Coming Soon)
-- **Smart Contract**: Deployed on Stellar Testnet
+- **Frontend**: [Deployed on Vercel](https://ssap-stellar-synthetic-assets-protocol-8jssnouq0.vercel.app) ✅ LIVE
+- **Backend**: [Deployed on Render](https://ssap-stellar-synthetic-assets-protocol.onrender.com) ✅ LIVE
+- **Smart Contract**: Deployed on Stellar Testnet ✅ LIVE
 
 ## 📊 Project Status
 
 | Component | Status | Description |
 |-----------|--------|-------------|
 | Smart Contract | ✅ Deployed | Deployed on Stellar Testnet |
-| Backend | ✅ Ready | WebSocket server with multi-oracle feeds |
-| Frontend | ✅ Ready | React app with Freighter integration |
-| AI Risk Analysis | ✅ Ready | Python-based risk monitoring |
-| Production Deploy | 🚧 In Progress | Vercel + Render deployment |
+| Backend | ✅ Live | WebSocket server with multi-oracle feeds |
+| Frontend | ✅ Live | React app with Freighter integration |
+| AI Risk Analysis | ✅ Live | Real-time risk monitoring |
+| Production Deploy | ✅ Complete | Vercel + Render deployment |
+| Socket.IO Integration | ✅ Live | Real-time price updates |
 
 ## 📋 Features
 
@@ -142,17 +143,17 @@ ssap-stellar/
 ## 🔧 Configuration
 
 ### Smart Contract
-- **Contract ID**: `[CONTRACT_ID]` (Update after deployment)
+- **Contract ID**: `CBTUI3R6FK5C4P6AXC2QN6IDHVILTT4KNK26CW6AZLJ3SGSOEMSKIQFR`
 - **Network**: Stellar Testnet
 - **Admin**: `[ADMIN_ADDRESS]` (Update after deployment)
 
 ### Backend APIs
-- **WebSocket**: `ws://localhost:8080`
-- **REST API**: `http://localhost:8080/api`
+- **WebSocket**: `ws://localhost:8080` (Local) / `wss://ssap-stellar-synthetic-assets-protocol.onrender.com` (Production)
+- **REST API**: `http://localhost:8080/api` (Local) / `https://ssap-stellar-synthetic-assets-protocol.onrender.com/api` (Production)
 
 ### Frontend
 - **Development**: `http://localhost:5173`
-- **Production**: Vercel deployment
+- **Production**: [https://ssap-stellar-synthetic-assets-protocol-8jssnouq0.vercel.app](https://ssap-stellar-synthetic-assets-protocol-8jssnouq0.vercel.app)
 
 ## 🧪 Testing
 
