@@ -1,0 +1,46 @@
+services:
+  - type: web
+    name: ssap-backend
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node websocket-server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: WEBSOCKET_PORT
+        value: 10000
+      - key: REFLECTOR_API_KEY
+        fromDatabase:
+          name: ssap-db
+          property: REFLECTOR_API_KEY
+      - key: CHAINLINK_API_KEY
+        fromDatabase:
+          name: ssap-db
+          property: CHAINLINK_API_KEY
+      - key: BINANCE_API_KEY
+        fromDatabase:
+          name: ssap-db
+          property: BINANCE_API_KEY
+      - key: YAHOO_API_KEY
+        fromDatabase:
+          name: ssap-db
+          property: YAHOO_API_KEY
+      - key: ALPHA_VANTAGE_API_KEY
+        fromDatabase:
+          name: ssap-db
+          property: ALPHA_VANTAGE_API_KEY
+      - key: CONTRACT_ID
+        value: CBTUI3R6FK5C4P6AXC2QN6IDHVILTT4KNK26CW6AZLJ3SGSOEMSKIQFR
+      - key: NETWORK
+        value: testnet
+      - key: ADMIN_SECRET
+        fromDatabase:
+          name: ssap-db
+          property: ADMIN_SECRET
+
+databases:
+  - name: ssap-db
+    plan: free

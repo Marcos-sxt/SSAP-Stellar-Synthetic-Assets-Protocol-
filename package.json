@@ -1,0 +1,45 @@
+{
+  "name": "ssap-stellar",
+  "version": "1.0.0",
+  "description": "Stellar Synthetic Asset Protocol (SSAP) on Stellar blockchain",
+  "main": "index.js",
+  "scripts": {
+    "install:all": "npm install && cd frontend && npm install && cd ../backend && npm install",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && npm run dev",
+    "build": "cd frontend && npm run build",
+    "test": "npm run test:contracts && npm run test:backend && npm run test:frontend",
+    "test:contracts": "cd contracts && cargo test",
+    "test:backend": "cd backend && npm test",
+    "test:frontend": "cd frontend && npm test",
+    "deploy:contract": "cd contracts && stellar contract deploy --source-account admin --network testnet",
+    "setup:contract": "cd backend && node setup-dummy-data.js",
+    "start": "cd backend && node websocket-server.js"
+  },
+  "keywords": [
+    "stellar",
+    "soroban",
+    "synthetic-assets",
+    "defi",
+    "trading",
+    "blockchain"
+  ],
+  "author": "SAPP Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/ssap-stellar.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/ssap-stellar/issues"
+  },
+  "homepage": "https://github.com/yourusername/ssap-stellar#readme"
+}

@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "5173:5173"
+    environment:
+      - VITE_WEBSOCKET_URL=ws://localhost:8080
+      - VITE_HORIZON_URL=https://horizon-testnet.stellar.org
+    depends_on:
+      - backend
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      - NODE_ENV=development
+      - PORT=8080
+      - WEBSOCKET_PORT=8080
+      - CONTRACT_ID=CBTUI3R6FK5C4P6AXC2QN6IDHVILTT4KNK26CW6AZLJ3SGSOEMSKIQFR
+      - NETWORK=testnet
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
+
+  smart-contract:
+    build:
+      context: ./contracts
+      dockerfile: Dockerfile
+    volumes:
+      - ./contracts:/app
+    working_dir: /app
+    command: cargo test

@@ -1,0 +1,24 @@
+{
+  "name": "sapp-backend",
+  "version": "1.0.0",
+  "description": "SAPP Backend API with in-memory cache",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@stellar/stellar-sdk": "^14.1.1",
+    "axios": "^1.12.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "ethers": "^6.15.0",
+    "express": "^4.18.2",
+    "socket.io": "^4.7.4",
+    "stellar-sdk": "^11.0.0",
+    "ws": "^8.18.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}
