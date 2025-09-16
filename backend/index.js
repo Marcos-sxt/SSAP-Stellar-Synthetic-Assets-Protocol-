@@ -3,7 +3,7 @@ const http = require('http');
 const socketIo = require('socket.io');
 const cors = require('cors');
 const axios = require('axios');
-const { StellarSdk } = require('stellar-sdk');
+const StellarSdk = require('@stellar/stellar-sdk');
 require('dotenv').config();
 
 const app = express();
