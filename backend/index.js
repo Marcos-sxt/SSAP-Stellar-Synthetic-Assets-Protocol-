@@ -3,7 +3,7 @@ const http = require('http');
 const socketIo = require('socket.io');
 const cors = require('cors');
 const axios = require('axios');
-const StellarSdk = require('@stellar/stellar-sdk');
+const { Horizon } = require('@stellar/stellar-sdk');
 require('dotenv').config();
 
 const app = express();
@@ -25,7 +25,7 @@ const pricesCache = new Map();
 const riskAlerts = new Map();
 
 // Configuração Stellar
-const stellarServer = new StellarSdk.Server('https://horizon-testnet.stellar.org');
+const stellarServer = new Horizon.Server('https://horizon-testnet.stellar.org');
 const networkPassphrase = 'Test SDF Network ; September 2015';
 
 // Configuração do contrato (será preenchido após deploy)
